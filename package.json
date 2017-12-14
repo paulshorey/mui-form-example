@@ -1,12 +1,12 @@
 {
   "name": "react-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "flow-bin": "^0.56.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.2.1",
-    "mui-form": "^1.0.3",
+    "mui-form": "^1.1.6",
     "prettier": "^1.7.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
