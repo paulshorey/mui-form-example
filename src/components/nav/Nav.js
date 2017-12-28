@@ -6,7 +6,6 @@ import * as Styled from './NavStyled';
 
 type PropsHOC = {
 	routes: [],
-	currentPath: {},
 	children: {},
 };
 type StateHOC = {
@@ -14,7 +13,6 @@ type StateHOC = {
 };
 type Props = {
 	routes: [], // list of routes/urls/components from src/devices
-	currentPath: {}, // window.location.pathname ... but more React'ive
 	nav: {}, // window.store.nav ... passed from NavConnected component below
 };
 
@@ -40,11 +38,11 @@ export class Nav extends Component<Props> {
 	};
 
 	renderNav() {
-		const { routes, currentPath } = this.props;
+		const { routes } = this.props;
 		return routes.map((link, index) => {
 			if (link.children) {
 				return (
-					<NavGroup key={link.title + index} title={link.title} currentPath={currentPath}>
+					<NavGroup key={link.title + index} title={link.title}>
 						{this.renderLinks(link.children)}
 					</NavGroup>
 				);
@@ -58,11 +56,6 @@ export class Nav extends Component<Props> {
 		return (
 			<Styled.Nav className={'nav_left' + (this.props.nav.opened ? '' : ' closed')}>
 				{this.renderNav()}
-
-				{/* <Link className="title link" to="/">
-					<span className="fontIcon icon-navlink_dot" />
-					<span>Logout</span>
-				</Link> */}
 			</Styled.Nav>
 		);
 	}

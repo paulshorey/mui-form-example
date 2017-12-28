@@ -24,15 +24,7 @@ class PageComponent extends React.Component {
 	render() {
 		var { history } = this.props;
 
-		setTimeout(()=>{
-			window.store.message = {
-				title: <span><span className="icon-warning"></span> This app is not-functional without the Mui hardware. <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">CLICK HERE TO ENTER the DEMO &raquo;</a> </span>,
-				type: 'warning'
-			};
-		},3000);
-
 		var formSubmit = valid => {
-			console.warn('submitting...');
 			this.setState({ muiFormSubmitting: true });
 			window.store.message = {};
 			valid
@@ -63,7 +55,7 @@ class PageComponent extends React.Component {
 			<Box box={{ title: 'Login Help' }}>
 				<div className="form" style={{ minWidth: '200px' }}>
 					<p>
-						Username: root<br />Password: admin
+						This app is not-functional without the Luxul hardware, for which it was originally designed. <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">CLICK HERE TO ENTER the DEMO &raquo;</a>
 					</p>
 				</div>
 			</Box>
@@ -79,7 +71,13 @@ class PageComponent extends React.Component {
 		];
 
 		return (
-			<Styled.PageLogin>
+			<Styled.PageLogin onClick={()=>{
+				// demo only!
+				window.store.message = {
+					title: <span><span className="icon-warning"></span> This login screen is for show only. <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">CLICK HERE TO ENTER the DEMO &raquo;</a> </span>,
+					type: 'warning'
+				};
+			}}>
 				<Box box={{ title: 'Login', id: 'boxLogin', TopChildren: TopChildren }}>
 					<MuiForm stateScope={this} onSubmit={formSubmit}>
 						<div className="formSection">

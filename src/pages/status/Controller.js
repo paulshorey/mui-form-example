@@ -3,7 +3,7 @@ import React from 'react';
 /* components */
 import Box from 'components/box/Box';
 
-import { MuiForm /*, MuiSelect, MuiInput, validations*/ } from 'components/form/MuiForm';
+import { MuiForm /*, MuiSelect, MuiInput, validations*/ } from 'mui-form';
 
 /*
 	form

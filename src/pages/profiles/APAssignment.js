@@ -12,7 +12,7 @@ import {
 	MuiSelect,
 	validations,
 	MuiButton,
-} from 'components/form/MuiForm';
+} from 'mui-form';
 
 /*
 	form

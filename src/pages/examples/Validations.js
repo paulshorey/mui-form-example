@@ -4,7 +4,7 @@ import React from 'react';
 import Box from 'components/box/Box';
 import Hint from 'components/hint/Hint';
 import HintBox from 'components/hint/HintBox';
-import { MuiForm, MuiInput, validations } from 'components/form/MuiForm';
+import { MuiForm, MuiInput, MuiSelect, MuiToggle, validations } from 'mui-form';
 
 /*
 	form
@@ -46,12 +46,21 @@ class PageComponent extends React.Component {
 									description="Can't be an empty string if input. Must be checked ON if toggle switch. Select box must have some option chosen."
 								/>
 							</label>
-							<MuiInput
-								stateScope={this}
-								name="second_text_field"
-								type="text"
-								validations={[validations.required]}
-							/>
+							<MuiSelect stateScope={this} name="proto" validations={[validations.required]}>
+								<option value="DHCP">DHCP client</option>
+								<option value="static">Static address</option>
+								<option value="PPPoE">PPPoE</option>
+							</MuiSelect>
+						</fieldset>
+						<fieldset>
+							<label>
+								This is also required:{' '}
+								<Hint
+									title="Required"
+									description={<div><p>A toggle switch is simply a &lt;checkbox /&gt; element, styled for Material UI.</p><p>It can be used to confirm something, or open a secret section.</p></div>}
+								/>
+							</label>
+							<MuiToggle stateScope={this} name="confirm" validations={[validations.required]} />
 						</fieldset>
 					</div>
 
@@ -154,6 +163,26 @@ class PageComponent extends React.Component {
 								validations={[validations.required, validations.ipv6]}
 							/>
 						</fieldset>
+					</div>
+
+					<div className="formSection">
+						<h4>Etc:</h4>
+
+						<fieldset>
+							<label>
+								Select:
+								<Hint
+									title="Select Field"
+									description="The &lt;MuiSelect /&gt; is simply an HTML &lt;select /&gt; element styled for Material UI"
+								/>
+							</label>
+							<MuiSelect stateScope={this} name="lan.proto" validations={[validations.required]}>
+								<option value="DHCP">DHCP client</option>
+								<option value="static">Static address</option>
+								<option value="PPPoE">PPPoE</option>
+							</MuiSelect>
+						</fieldset>
+
 					</div>
 				</MuiForm>
 				<HintBox />

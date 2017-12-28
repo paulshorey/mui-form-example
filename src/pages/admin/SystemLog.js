@@ -4,7 +4,7 @@ import React from 'react';
 import Box from 'components/box/Box';
 
 /* forms */
-import { MuiForm } from 'components/form/MuiForm';
+import { MuiForm } from 'mui-form';
 
 /*
 	form

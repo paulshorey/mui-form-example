@@ -4,7 +4,7 @@ import React from 'react';
 import Box from 'components/box/Box';
 import Hint from 'components/hint/Hint';
 import HintBox from 'components/hint/HintBox';
-import { MuiForm, MuiInput, MuiSelect, validations } from 'components/form/MuiForm';
+import { MuiForm, MuiInput, MuiSelect, validations } from 'mui-form';
 
 /*
 	form

@@ -76,7 +76,6 @@ class Layout extends React.Component {
 
 	render() {
 		var { history } = this.props;
-		const currentPath = history.location.pathname;
 		return (
 			<Styled.Layout>
 				<SpecificErrorBoundary location="Layout.js">
@@ -94,7 +93,7 @@ class Layout extends React.Component {
 
 						<div className="layout_content">
 							{this.props.routes && (
-								<Nav history={history} routes={this.props.routes} currentPath={currentPath} />
+								<Nav history={history} routes={this.props.routes} />
 							)}
 
 							<div

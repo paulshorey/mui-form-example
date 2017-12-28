@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Nav = styled.nav`
+export const Nav = styled.div`
 	/*
 		order is important for specificicity! style .group first, then .title
 	*/

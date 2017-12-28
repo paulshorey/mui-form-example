@@ -10,7 +10,7 @@ import {
 	MuiToggle,
 	MuiInput,
 	validations,
-} from 'components/form/MuiForm';
+} from 'mui-form';
 
 /*
 Very simple, receive the value and determine if it is valid

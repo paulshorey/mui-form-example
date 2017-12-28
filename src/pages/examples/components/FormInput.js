@@ -3,7 +3,7 @@ import React from 'react';
 /*
 Import validations variable, which is a list of functions. Add one or more functions to your input`s validations property, in the form of an array. You do not have to use these provided validations. You can use your own, or mix and match. Actually, we will do that. Couple lines down, see what one of these validation functions looks like:
 */
-import { MuiForm, MuiInput, validations } from 'components/form/MuiForm';
+import { MuiForm, MuiInput, validations } from 'mui-form';
 
 /*
 Very simple, receive the value and determine if it is valid

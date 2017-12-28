@@ -1,9 +1,9 @@
 // @flow
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 
 type Props = {
 	title: string,
-	currentPath: any,
 	children: any,
 };
 type State = {
@@ -18,17 +18,27 @@ class NavGroup extends Component<Props, State> {
 		this.setState({ isOpen: !this.state.isOpen });
 	};
 
+	/*
+		to detect route change using react-router-dom
+	*/
 	componentWillMount(){
+		const { history } = this.props;
+		this.unsubscribeFromHistory = history.listen(this.handleLocationChange);
+		this.handleLocationChange(history.location);
+	}
+	componentWillUnmount() {
+		if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
+	}
+	handleLocationChange = (location)=>{
 		const urls = this.props.children.map((child, index) => {
 			return child.props.to;
 		});
-		const currentPath = this.props.currentPath;
-		const activeUrl = urls.includes(`${currentPath}`) ? true : false;
+		const activeUrl = urls.includes(location.pathname) ? true : false;
 		activeUrl && this.setState({ isOpen: true });
 		if (activeUrl) {
 			this.setState({isActive:true});
 		}
-	};
+	}
 
 	render() {
 		return (
@@ -44,4 +54,4 @@ class NavGroup extends Component<Props, State> {
 	}
 }
 
-export default NavGroup;
+export default withRouter(NavGroup);

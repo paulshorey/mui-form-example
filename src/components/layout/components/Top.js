@@ -15,10 +15,12 @@ class Top extends React.Component {
 		const { deviceInfo } = this.props;
 		if (deviceInfo) {
 			var DeviceInfo = (
-				<Box box={{ title: 'New Mui Product', theme: 'global' }}>
+				<Box box={{ title: 'New Luxul Product', theme: 'global' }}>
 					<div className="form">
-						<p>Model #: {deviceInfo.model}</p>
-						<p>Firmware #: {deviceInfo.firmware}</p>
+						<p>Model #: {deviceInfo.model}<br />Firmware #: {deviceInfo.firmware}</p>
+						<p>This app was originally designed for Luxul Inc., in Draper UT. It had some API calls that worked with Luxul brand products.</p>
+						<p>Now, it is simply a UI demo for Mui-Form ReactJS library, and a bootstrap for a modern ReactJS app.</p>
+						<p>If you are on the login screen, <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">click here to enter the demo &raquo;</a></p>
 					</div>
 				</Box>
 			);
