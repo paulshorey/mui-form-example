@@ -58,6 +58,7 @@ window.store = new Proxy(window.store, {
 
 		// custom validation
 		switch (propertyName) {
+			
 			case 'message':
 				// opened by default
 				if (value.title && value.opened === undefined) {

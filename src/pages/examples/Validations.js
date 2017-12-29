@@ -10,9 +10,7 @@ import { MuiForm, MuiInput, MuiSelect, MuiToggle, validations } from 'mui-form';
 	form
 */
 class PageComponent extends React.Component {
-	state = {
-		something: 'whatever',
-	};
+	state = {};
 
 	render() {
 		var handleSubmit = promise => {};
@@ -162,25 +160,6 @@ class PageComponent extends React.Component {
 								type="text"
 								validations={[validations.required, validations.ipv6]}
 							/>
-						</fieldset>
-					</div>
-
-					<div className="formSection">
-						<h4>Etc:</h4>
-
-						<fieldset>
-							<label>
-								Select:
-								<Hint
-									title="Select Field"
-									description="The &lt;MuiSelect /&gt; is simply an HTML &lt;select /&gt; element styled for Material UI"
-								/>
-							</label>
-							<MuiSelect stateScope={this} name="lan.proto" validations={[validations.required]}>
-								<option value="DHCP">DHCP client</option>
-								<option value="static">Static address</option>
-								<option value="PPPoE">PPPoE</option>
-							</MuiSelect>
 						</fieldset>
 
 					</div>

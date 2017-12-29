@@ -37,7 +37,6 @@ class Layout extends Component<Props> {
 							{this.props.routes && (
 								<Nav routes={this.props.routes} />
 							)}
-
 							<div
 								className="page"
 								onClick={() => {
