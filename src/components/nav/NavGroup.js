@@ -8,12 +8,13 @@ type Props = {
 };
 type State = {
 	isOpen: boolean,
+	isActive: boolean
 };
-
 class NavGroup extends Component<Props, State> {
-	state = {
-		isOpen: false,
-	};
+	constructor(props){
+		super(props);
+		this.state = {};
+	}
 	toggleOpen = () => {
 		this.setState({ isOpen: !this.state.isOpen });
 	};
@@ -21,23 +22,22 @@ class NavGroup extends Component<Props, State> {
 	/*
 		to detect route change using react-router-dom
 	*/
-	componentWillMount(){
-		const { history } = this.props;
-		this.unsubscribeFromHistory = history.listen(this.handleLocationChange);
-		this.handleLocationChange(history.location);
-	}
-	componentWillUnmount() {
-		if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
-	}
-	handleLocationChange = (location)=>{
+	updateLocation(location){
 		const urls = this.props.children.map((child, index) => {
 			return child.props.to;
 		});
-		const activeUrl = urls.includes(location.pathname) ? true : false;
-		activeUrl && this.setState({ isOpen: true });
+		const activeUrl = urls.includes(this.props.history.location.pathname) ? true : false;
 		if (activeUrl) {
-			this.setState({isActive:true});
+			this.setState({isActive:true,isOpen:true});
 		}
+	}
+	componentWillMount(){
+		const { history } = this.props;
+		this.unsubscribeFromHistory = history.listen(this.updateLocation.bind(this));
+		this.updateLocation.bind(this)(history.location);
+	}
+	componentWillUnmount() {
+		if (this.unsubscribeFromHistory) this.unsubscribeFromHistory();
 	}
 
 	render() {

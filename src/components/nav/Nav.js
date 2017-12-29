@@ -48,7 +48,6 @@ export class Nav extends Component<Props> {
 	}
 
 	render() {
-		console.log('Nav',this.props);
 		return (
 			<Styled.Nav className={'nav_left' + (this.props.ui.nav.opened ? '' : ' closed')}>
 				{this.renderNav()}
@@ -58,7 +57,6 @@ export class Nav extends Component<Props> {
 }
 
 const mapStateToProps = (state) => {
-	console.log('mapStateToProps',state);
 	return {
     	ui: state.ui || {}
   	}

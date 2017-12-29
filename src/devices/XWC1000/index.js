@@ -5,17 +5,13 @@ import Layout from 'components/layout/Layout';
 /*
 	list pages for <Nav /> and <Switch />
 */
-const deviceInfo = {
+window.store.deviceInfo = {
 	model: 'XWC-1000',
 	firmware: 'abc-123',
 };
 const routes = [
 	{
 		title: 'Status',
-		url: '/XWC1000/status',
-		component: function() {
-			return require('pages/status/Controller').default;
-		},
 		children: [
 			{
 				title: 'Controller',
@@ -35,37 +31,33 @@ const routes = [
 	},
 	{
 		title: 'Profile Management',
-		url: '/XWC1000/profiles',
-		component: function() {
-			return require('pages/status/Controller').default;
-		},
 		children: [
 			{
 				title: 'AP Management',
 				url: '/XWC1000/profiles/ap_management',
 				component: function() {
-					return require('pages/status/AP').default;
+					return require('pages/profiles/APManagement').default;
 				},
 			},
 			{
 				title: 'AP Assignment',
 				url: '/XWC1000/profiles/ap_assignment',
 				component: function() {
-					return require('pages/status/Controller').default;
+					return require('pages/profiles/APAssignment').default;
 				},
 			},
 			{
 				title: 'SSID Management',
 				url: '/XWC1000/profiles/ssid_management',
 				component: function() {
-					return require('pages/status/AP').default;
+					return require('pages/profiles/SSIDManagement').default;
 				},
 			},
 			{
 				title: 'Wireless Settings',
 				url: '/XWC1000/profiles/wireless_settings',
 				component: function() {
-					return require('pages/status/Controller').default;
+					return require('pages/profiles/WirelessSettings').default;
 				},
 			},
 		],
@@ -81,8 +73,27 @@ const routes = [
 		title: 'Controller Settings',
 		url: '/XWC1000/controller',
 		component: function() {
-			return require('pages/status/Controller').default;
+			return require('pages/controller/NetworkSettings').default;
 		},
+	},
+	{
+		title: 'Examples',
+		children: [
+			{
+				title: 'Network',
+				url: '/XWC1000/examples/network',
+				component: function() {
+					return require('pages/examples/Network').default;
+				},
+			},
+			{
+				title: 'Validation',
+				url: '/XWC1000/examples/validation',
+				component: function() {
+					return require('pages/examples/Validations').default;
+				},
+			},
+		],
 	},
 ];
 routes.pageNotFound = {
@@ -142,7 +153,7 @@ class XWC1000 extends React.Component {
 
 	render() {
 		return (
-			<Layout history={this.props.history} routes={routes} deviceInfo={deviceInfo}>
+			<Layout history={this.props.history} routes={routes}>
 				{/* Link urls */}
 				<Switch>
 					{/* No url */}
@@ -151,7 +162,7 @@ class XWC1000 extends React.Component {
 					{this.renderRoutes(routes)}
 					{/* Default url: 404 */}
 					<Route
-						component={function() {
+						component={() => {
 							var RouteComponent = routes.pageNotFound.component();
 							return <RouteComponent {...this.props} page={routes.pageNotFound} />;
 						}}
@@ -161,4 +172,5 @@ class XWC1000 extends React.Component {
 		);
 	}
 }
+
 export default XWC1000;

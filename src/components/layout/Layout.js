@@ -18,11 +18,10 @@ type Props = {
 };
 class Layout extends Component<Props> {
 	render() {
-		var { history } = this.props;
 		return (
 			<Styled.Layout>
 				<SpecificErrorBoundary location="Layout.js">
-					<Message history={history} />
+					<Message />
 					<div
 						className={'layout_container' + (this.props.routes ? ' withNav' : ' noNav')}
 						tabIndex={0}
@@ -32,11 +31,11 @@ class Layout extends Component<Props> {
 							}
 						}}
 					>
-						<Top history={history} />
+						<Top />
 
 						<div className="layout_content">
 							{this.props.routes && (
-								<Nav history={history} routes={this.props.routes} />
+								<Nav routes={this.props.routes} />
 							)}
 
 							<div
@@ -49,10 +48,10 @@ class Layout extends Component<Props> {
 							</div>
 						</div>
 
-						<Bottom history={history} routes={this.props.routes} />
+						<Bottom routes={this.props.routes} />
 
-						<Side history={history} />
-						<Popup history={history} />
+						<Side />
+						<Popup />
 					</div>
 				</SpecificErrorBoundary>
 			</Styled.Layout>

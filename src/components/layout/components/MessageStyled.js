@@ -46,6 +46,12 @@ export const Message = styled.div`
 				padding-right:0.15rem;
 				font-size:115%;
 			}
+			span.icon-warning {
+				position: relative;
+				top: -0.2rem;
+				padding-right: 0.1rem;
+				font-size: 85%;
+			}
 
 			.message_text {
 				padding: 0 2rem 0 0;
@@ -72,7 +78,7 @@ export const Message = styled.div`
 				&.messageTitle {
 					font-weight: bold;
 					font-size: 1.25rem;
-					line-height: 1.25rem;
+					line-height: 1.35rem;
 					margin-top: 0.15rem;
 					margin-bottom: -0.175rem;
 				}
