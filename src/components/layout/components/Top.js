@@ -1,16 +1,16 @@
-import React from 'react';
+//@flow
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import Box from 'components/box/Box';
+import * as uiActions from 'redux/actions/ui'; 
 
 import * as Styled from './TopStyled';
 import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
 
-// type Props = {
-// 	deviceInfo: {
-// 		model: string,
-// 		firmware: string,
-// 	}, // from src/devices ... model name, firmware number, etc
-// };
-class Top extends React.Component {
+type Props = {
+	nav: {}
+};
+class Top extends Component<Props> {
 	render() {
 		const { deviceInfo } = this.props;
 		if (deviceInfo) {
@@ -52,12 +52,7 @@ class Top extends React.Component {
 						<Styled.Hamburger
 							id="Hamburger"
 							onClick={event => {
-								if (window.store.nav.opened) {
-									document.getElementById('Hamburger').classList.remove('opened');
-								} else {
-									document.getElementById('Hamburger').classList.add('opened');
-								}
-								window.store.nav = { opened: !window.store.nav.opened };
+								this.props.dispatch(uiActions.UI_NAV_TOGGLE());
 							}}
 						>
 							<div className="hamburger-icon">
@@ -80,10 +75,17 @@ class Top extends React.Component {
 		);
 	}
 }
+const mapStateToProps = (state) => {
+	return {
+		nav: state.ui.nav || {}
+  	}
+}
+Top = connect(mapStateToProps)(Top);
+
 
 // connect global data
 // when {window.store.top} changes, update {this.state.top}
-class TopConnected extends React.Component {
+class TopConnected extends Component {
 	constructor(){
 		super();
 		this.state = {
@@ -103,5 +105,5 @@ class TopConnected extends React.Component {
 		return <Top deviceInfo={this.state.deviceInfo} />;
 	}
 }
-
 export default TopConnected;
+

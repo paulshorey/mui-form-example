@@ -32,6 +32,13 @@ import * as ubus from 'ubus'; /* pass this to each Route */
 import 'window/store';
 
 /*
+	LETS USE REDUX INSTEAD LIKE A NORMAL APP
+*/
+// global data
+import {Provider} from "react-redux";
+import reduxStore from "redux/store";
+
+/*
 	LOAD APP with INITIAL ROUTE
 
 	* then after login, navigate to the device url (example: "/XWC1000") and react-router-dom will route device-specific urls there
@@ -59,7 +66,9 @@ ReactDOM.render(
 		<span className="responsive_label" id="responsive_phone_landscape">
 			Phone (Landscape)
 		</span>
-		<App ubus={ubus} />
+		<Provider store={reduxStore}>
+			<App ubus={ubus} />
+		</Provider>
 	</PrimaryErrorBoundary>,
 	document.getElementById('root')
 );

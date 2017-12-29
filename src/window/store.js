@@ -24,9 +24,6 @@ window.store = {
 		Box: null, // React Component or null
 		opened: false, // boolean, to show or hide markup independently from content, for smooth animation and to keep width during transition
 	},
-	nav: {
-		opened: true, // boolean, to show or hide navigation links
-	},
 	hintbox: {
 		title: '', // string
 		description: null, // React component(s) or null

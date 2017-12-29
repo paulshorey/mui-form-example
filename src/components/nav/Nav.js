@@ -1,22 +1,18 @@
 // @flow
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import NavGroup from './NavGroup';
 import * as Styled from './NavStyled';
+import * as uiActions from 'redux/actions/ui'; 
 
-type PropsHOC = {
-	routes: [],
-	children: {},
-};
-type StateHOC = {
-	nav: {},
-};
 type Props = {
 	routes: [], // list of routes/urls/components from src/devices
-	nav: {}, // window.store.nav ... passed from NavConnected component below
+	ui: {}, // window.store.ui from redux
 };
 
 export class Nav extends Component<Props> {
+
 	renderLinks = (links: any) => {
 		return links.map((link, index) => {
 			return (
@@ -26,8 +22,7 @@ export class Nav extends Component<Props> {
 					activeClassName="active"
 					to={link.url}
 					onClick={()=>{
-						document.getElementById('Hamburger').classList.remove('opened');
-						window.store.nav={}
+						this.props.dispatch(uiActions.UI_NAV_CLOSE());
 					}}
 				>
 					<span className="fontIcon icon-navlink_dot" />
@@ -53,33 +48,20 @@ export class Nav extends Component<Props> {
 	}
 
 	render() {
+		console.log('Nav',this.props);
 		return (
-			<Styled.Nav className={'nav_left' + (this.props.nav.opened ? '' : ' closed')}>
+			<Styled.Nav className={'nav_left' + (this.props.ui.nav.opened ? '' : ' closed')}>
 				{this.renderNav()}
 			</Styled.Nav>
 		);
 	}
 }
 
-/*
-	when {window.store.nav} changes, update {this.props.nav} in <Nav /> component above
-*/
-class NavConnected extends React.Component<PropsHOC, StateHOC> {
-	state = {
-		nav: window.store.nav,
-	};
-	componentWillMount() {
-		window.store.watch('nav', (name, oldValue, value) => {
-			this.setState({ [name]: value });
-			return value;
-		});
-	}
-	componentWillUnmount() {
-		window.store.unwatch('nav');
-	}
-	render() {
-		return <Nav {...this.props} nav={this.state.nav} />;
-	}
+const mapStateToProps = (state) => {
+	console.log('mapStateToProps',state);
+	return {
+    	ui: state.ui || {}
+  	}
 }
 
-export default NavConnected;
+export default connect(mapStateToProps)(Nav);
