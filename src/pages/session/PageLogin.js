@@ -1,6 +1,7 @@
 /* core */
 import React from 'react';
 /* components */
+import Layout from 'components/layout/Layout';
 import Box from 'components/box/Box';
 
 /* forms */
@@ -55,7 +56,15 @@ class PageComponent extends React.Component {
 			<Box box={{ title: 'Login Help' }}>
 				<div className="form" style={{ minWidth: '200px' }}>
 					<p>
-						This app is not-functional without the Luxul hardware, for which it was originally designed. <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">CLICK HERE TO ENTER the DEMO &raquo;</a>
+						This app is not-functional without the Luxul hardware, for which it was originally
+						designed.{' '}
+						<a
+							href="/XWC1001/examples/validation"
+							style={{ fontWeight: 'bold' }}
+							className="color_success fix_textWrap"
+						>
+							CLICK HERE TO ENTER the DEMO &raquo;
+						</a>
 					</p>
 				</div>
 			</Box>
@@ -71,28 +80,43 @@ class PageComponent extends React.Component {
 		];
 
 		return (
-			<Styled.PageLogin onClick={()=>{
-				// demo only!
-				window.store.message = {
-					title: <span><span className="icon-warning"></span> This login screen is for show only. <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">CLICK HERE TO ENTER the DEMO &raquo;</a> </span>,
-					type: 'warning'
-				};
-			}}>
-				<Box box={{ title: 'Login', id: 'boxLogin', TopChildren: TopChildren }}>
-					<MuiForm stateScope={this} onSubmit={formSubmit}>
-						<div className="formSection">
-							<fieldset>
-								<label>Username:</label>
-								<MuiInput stateScope={this} name="username" type="text" />
-							</fieldset>
-							<fieldset>
-								<label>Password:</label>
-								<MuiInput stateScope={this} name="password" type="password" />
-							</fieldset>
-						</div>
-					</MuiForm>
-				</Box>
-			</Styled.PageLogin>
+			<Layout>
+				<Styled.PageLogin
+					onClick={() => {
+						// demo only!
+						window.store.message = {
+							title: (
+								<span>
+									<span className="icon-warning" /> This login screen is for show only.{' '}
+									<a
+										href="/XWC1001/examples/validation"
+										style={{ fontWeight: 'bold' }}
+										className="color_success fix_textWrap"
+									>
+										CLICK HERE TO ENTER the DEMO &raquo;
+									</a>{' '}
+								</span>
+							),
+							type: 'warning',
+						};
+					}}
+				>
+					<Box box={{ title: 'Login', id: 'boxLogin', TopChildren: TopChildren || null }}>
+						<MuiForm stateScope={this} onSubmit={formSubmit}>
+							<div className="formSection">
+								<fieldset>
+									<label>Username:</label>
+									<MuiInput stateScope={this} name="username" type="text" />
+								</fieldset>
+								<fieldset>
+									<label>Password:</label>
+									<MuiInput stateScope={this} name="password" type="password" />
+								</fieldset>
+							</div>
+						</MuiForm>
+					</Box>
+				</Styled.PageLogin>
+			</Layout>
 		);
 	}
 }

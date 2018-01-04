@@ -10,14 +10,16 @@
     "lint-staged": "^4.2.1",
     "mui-form": "^1.1.9",
     "prettier": "^1.7.0",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-code-splitting": "^1.2.1",
+    "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.9",
-    "react-scripts": "1.0.16",
+    "react-scripts": "latest",
+    "redux": "^3.7.2",
     "redux-logger": "^3.0.6",
-    "styled-components": "^2.1.2",
+    "styled-components": "^2.4.0",
     "superagent": "^3.8.2"
   },
   "lint-staged": {
@@ -37,8 +39,9 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.2.8",
-    "react-test-renderer": "^16.0.0"
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "webpack": "^3.10.0"
   },
   "proxy": "http://192.168.0.19:80/"
 }

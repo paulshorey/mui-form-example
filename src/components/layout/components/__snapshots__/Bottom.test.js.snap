@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Bottom sc-bdVaJa idObzk"
+>
+  <span
+    className="logo"
+  >
+    <img
+      alt="Legrand"
+      src="/branding/logo/legrand_white.svg"
+    />
+  </span>
+  <span
+    className="copyright"
+  >
+    <span
+      className="desktop_only"
+    >
+      This app is non-functional without the Mui hardware. 
+    </span>
+    <a
+      className="color_success"
+      href="/XWC1001/examples/validation"
+      style={
+        Object {
+          "fontWeight": "bold",
+        }
+      }
+    >
+      CLICK HERE TO DEMO the UI »
+    </a>
+  </span>
+</div>
+`;

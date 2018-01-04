@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import NavGroup from './NavGroup';
 import * as Styled from './NavStyled';
-import * as uiActions from 'redux/actions/ui'; 
+import * as uiActions from 'redux/actions/ui';
 
 type Props = {
 	routes: [], // list of routes/urls/components from src/devices
@@ -12,7 +12,6 @@ type Props = {
 };
 
 export class Nav extends Component<Props> {
-
 	renderLinks = (links: any) => {
 		return links.map((link, index) => {
 			return (
@@ -21,7 +20,7 @@ export class Nav extends Component<Props> {
 					className="title link"
 					activeClassName="active"
 					to={link.url}
-					onClick={()=>{
+					onClick={() => {
 						this.props.dispatch(uiActions.UI_NAV_CLOSE());
 					}}
 				>
@@ -49,17 +48,19 @@ export class Nav extends Component<Props> {
 
 	render() {
 		return (
-			<Styled.Nav className={'nav_left' + (this.props.ui.nav.opened ? '' : ' closed')}>
+			<Styled.Nav
+				className={'nav_left' + (this.props.ui && this.props.ui.nav.opened ? '' : ' closed')}
+			>
 				{this.renderNav()}
 			</Styled.Nav>
 		);
 	}
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
 	return {
-    	ui: state.ui || {}
-  	}
-}
+		ui: state.ui || {},
+	};
+};
 
 export default connect(mapStateToProps)(Nav);

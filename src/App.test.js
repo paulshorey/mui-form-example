@@ -1,8 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { mount } from 'enzyme';
+import renderer from 'react-test-renderer';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+// shallow + redux
+import { connected } from 'index.testing';
+import { App } from './App';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+it('renders correctly', () => {
+	const tree = mount(<App />);
 });

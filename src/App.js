@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Layout from 'components/layout/Layout';
 import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
+import Async from 'react-code-splitting';
 
+/*
+	simulate API request
+*/
 setTimeout(function() {
 	window.store.deviceInfo = {
 		model: 'XWC1001',
@@ -16,25 +19,19 @@ setTimeout(function() {
 var routes = [
 	{
 		url: '/XWC1001',
-		component: function() {
-			return require('devices/XWC1001').default;
-		},
+		component: () => <Async load={import('devices/XWC1001')} />,
 	},
 	{
 		url: '/XWC1000',
-		component: function() {
-			return require('devices/XWC1000').default;
-		},
+		component: () => <Async load={import('devices/XWC1000')} />,
 	},
 ];
 routes.login = {
-	url: '/login',
-	component: function() {
-		return require('pages/session/PageLogin').default;
-	},
+	url: '/',
+	component: () => <Async load={import('pages/session/PageLogin')} />,
 };
 
-class App extends React.Component {
+export class App extends React.Component {
 	render() {
 		const { ubus } = this.props;
 
@@ -44,16 +41,7 @@ class App extends React.Component {
 		var Routes = [];
 		routes.forEach(function(route, index) {
 			if (route.component) {
-				Routes.push(
-					<Route
-						key={index}
-						path={route.url}
-						render={props => {
-							var RouteComponent = route.component();
-							return <RouteComponent history={props.history} ubus={ubus} page={route} />;
-						}}
-					/>
-				);
+				Routes.push(<Route key={route.url} path={route.url} component={route.component} />);
 			}
 		});
 
@@ -61,34 +49,23 @@ class App extends React.Component {
 			render <Route />s
 		*/
 		return (
-			<SpecificErrorBoundary location="App.js">
-				<Router>
-					<Switch>
-						{/*
-						Auto-built urls
-						*/}
-						{Routes}
+			<Router>
+				<Switch>
+					{/*
+					Auto-built urls
+					*/}
+					{Routes}
 
-						{/*
-						Default url: login
-						*/}
-						<Route
-							render={props => {
-								var RouteComponent = routes.login.component();
-								return (
-									<Layout history={props.history}>
-										<RouteComponent
-											history={props.history}
-											ubus={this.props.ubus}
-											page={routes.login}
-										/>
-									</Layout>
-								);
-							}}
-						/>
-					</Switch>
-				</Router>
-			</SpecificErrorBoundary>
+					{/*
+					Default url: login
+					*/}
+					<Route
+						key={routes.login.url}
+						path={routes.login.url}
+						component={routes.login.component}
+					/>
+				</Switch>
+			</Router>
 		);
 	}
 }

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="nav_left closed sc-bdVaJa fbOaeU"
+>
+  <div
+    className="group"
+  >
+    <div
+      className="title"
+      onClick={[Function]}
+    >
+      <span
+        className="fontIcon icon-navlink_plus"
+      />
+      <span
+        className="fontIcon icon-navlink_minus"
+      />
+      <span>
+        Status
+      </span>
+    </div>
+    <div
+      className="children"
+    >
+      <a
+        aria-current={false}
+        className="title link"
+        href="/XWC1001/status/controller"
+        onClick={[Function]}
+        style={undefined}
+      >
+        <span
+          className="fontIcon icon-navlink_dot"
+        />
+        <span>
+          Controller
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;

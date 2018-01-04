@@ -35,8 +35,8 @@ import 'window/store';
 	LETS USE REDUX INSTEAD LIKE A NORMAL APP
 */
 // global data
-import {Provider} from "react-redux";
-import reduxStore from "redux/store";
+import { Provider } from 'react-redux';
+import reduxStore from 'redux/store';
 
 /*
 	LOAD APP with INITIAL ROUTE
@@ -48,6 +48,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import PrimaryErrorBoundary from 'components/error/PrimaryErrorBoundary';
+// import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 ReactDOM.render(
 	<PrimaryErrorBoundary>
