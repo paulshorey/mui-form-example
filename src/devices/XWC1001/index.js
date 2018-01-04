@@ -3,6 +3,12 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Layout from 'components/layout/Layout';
 
 /*
+	!NOTICE
+	this is the page for secondary-level routes specific to this first-level-route device url
+	* top-level routing is in /src/App.js
+*/
+
+/*
 	list pages for <Nav /> and <Switch />
 */
 window.store.deviceInfo = {

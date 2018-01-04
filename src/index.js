@@ -48,7 +48,6 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 import App from './App';
 import PrimaryErrorBoundary from 'components/error/PrimaryErrorBoundary';
-// import { BrowserRouter as Router, Switch } from 'react-router-dom';
 
 ReactDOM.render(
 	<PrimaryErrorBoundary>

@@ -4,7 +4,6 @@ import renderer from 'react-test-renderer';
 // shallow + redux
 import { shallow, connected, shallowConnected } from 'index.testing';
 import { Nav } from './Nav';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 it('renders correctly', () => {
 	const tree = renderer

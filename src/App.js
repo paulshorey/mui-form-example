@@ -1,7 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
 import Async from 'react-code-splitting';
+// import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+/*
+	!NOTICE
+	this is the page for top-level routes
+	* secondary-level routing is in /src/devices/${deviceInfo.model}
+*/
 
 /*
 	simulate API request
@@ -31,10 +37,8 @@ routes.login = {
 	component: () => <Async load={import('pages/session/PageLogin')} />,
 };
 
-export class App extends React.Component {
+export class Routes extends React.Component {
 	render() {
-		const { ubus } = this.props;
-
 		/*
 			build list of <Route />s
 		*/
@@ -70,4 +74,4 @@ export class App extends React.Component {
 	}
 }
 
-export default App;
+export default Routes;
