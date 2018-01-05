@@ -2,24 +2,23 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 // shallow + redux
-import { shallow, connected, shallowConnected } from 'index.testing';
+import { connected, shallowConnected } from 'index.testing';
 import { App } from './App';
 
+// extras for routing
+import { Route } from 'react-router';
+import { shallow } from 'enzyme';
+
 it('renders correctly', () => {
-	// const tree = renderer
-	// 	.create(
-	// 		shallowConnected(
-	// 			<App />
-	// 		)
-	// 	)
-	// 	.toJSON();
-	// expect(tree).toMatchSnapshot();
+	const wrapper = shallow(<App />);
+	const pathMap = wrapper.find(Route).reduce((pathMap, route) => {
+		const routeProps = route.props();
+		pathMap[routeProps.path] = routeProps.component;
+		return pathMap;
+	});
 });
 
 /*
-    CANNOT FIGURE OUT HOW
-    to test (unit or snapshot)
-    React + Redux + Router + <Route/>s
-    without it trying to render everything inside... other components can easily be made "shallow", but these <Route />s render based on URL, kind of asynchronously
-    :(
+    This basically only checks for errors.
+    If the component (Routes) renders anything at all, without errors, then test is successful.
 */
