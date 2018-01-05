@@ -4,7 +4,7 @@ import * as Styled from './SideStyled';
 
 // only local data
 // {this.state} and {this.props}
-class Side extends React.Component {
+export class Side extends React.Component {
 	render() {
 		const { side = {} } = this.props;
 
@@ -45,7 +45,7 @@ class SideConnected extends React.Component {
 			return value;
 		});
 	}
-	componentWillUnmount() {		
+	componentWillUnmount() {
 		window.store.unwatch('side');
 	}
 	render() {

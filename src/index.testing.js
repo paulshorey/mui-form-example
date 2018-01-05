@@ -11,7 +11,7 @@ function connected(children) {
 	class Result extends React.Component {
 		render() {
 			return (
-				<Provider store={store} key={1}>
+				<Provider store={store} key="testing!" id="testing!">
 					<Router>
 						<Switch>{this.props.children}</Switch>
 					</Router>
@@ -25,7 +25,7 @@ function shallowConnected(children) {
 	class Result extends React.Component {
 		render() {
 			return (
-				<Provider store={store} key={1}>
+				<Provider store={store} key="testing!" id="testing!">
 					<Router>
 						<Switch>{this.props.children}</Switch>
 					</Router>
@@ -36,7 +36,16 @@ function shallowConnected(children) {
 	return enzyme.shallow(<Result>{children || null}</Result>);
 }
 function shallow(children) {
-	return enzyme.shallow(children);
+	class Result extends React.Component {
+		render() {
+			return (
+				<div key="testing!" id="testing!">
+					{this.props.children}
+				</div>
+			);
+		}
+	}
+	return enzyme.shallow(<Result>{children || null}</Result>);
 }
 
 export { shallow, connected, shallowConnected };

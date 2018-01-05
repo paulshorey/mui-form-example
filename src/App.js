@@ -37,7 +37,7 @@ routes.login = {
 	component: () => <Async load={import('pages/session/PageLogin')} />,
 };
 
-export class Routes extends React.Component {
+export class App extends React.Component {
 	render() {
 		/*
 			build list of <Route />s
@@ -74,4 +74,4 @@ export class Routes extends React.Component {
 	}
 }
 
-export default Routes;
+export default App;

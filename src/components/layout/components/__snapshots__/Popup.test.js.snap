@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="popupBox  sc-bdVaJa cnOeLs"
+>
+  <div
+    className="popupBox_overlay"
+    onClick={[Function]}
+  />
+  <div
+    className="popupBox_content"
+  >
+    <div
+      className="popupBox_close"
+      onClick={[Function]}
+    >
+      <span
+        className="fontIcon icon-cross"
+        title="Close"
+      />
+    </div>
+  </div>
+</div>
+`;

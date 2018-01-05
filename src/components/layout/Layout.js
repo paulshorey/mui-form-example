@@ -1,7 +1,7 @@
 //@flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as uiActions from 'redux/actions/ui'; 
+import * as uiActions from 'redux/actions/ui';
 
 import Top from 'components/layout/components/Top';
 import Bottom from 'components/layout/components/Bottom';
@@ -14,9 +14,9 @@ import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
 import * as Styled from './LayoutStyled';
 
 type Props = {
-	ui: {}
+	ui: {},
 };
-class Layout extends Component<Props> {
+export class Layout extends Component<Props> {
 	render() {
 		return (
 			<Styled.Layout>
@@ -34,9 +34,7 @@ class Layout extends Component<Props> {
 						<Top />
 
 						<div className="layout_content">
-							{this.props.routes && (
-								<Nav routes={this.props.routes} />
-							)}
+							{this.props.routes && <Nav routes={this.props.routes} />}
 							<div
 								className="page"
 								onClick={() => {
@@ -58,11 +56,10 @@ class Layout extends Component<Props> {
 	}
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
 	return {
-		ui: state.ui || {}
-  	}
-}
+		ui: state.ui || {},
+	};
+};
 
 export default connect(mapStateToProps)(Layout);
-

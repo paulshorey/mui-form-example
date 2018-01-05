@@ -6,7 +6,7 @@ import * as Styled from './HintStyled';
 /*
 	export: hint tip
 */
-class Hint extends React.Component {
+export class Hint extends React.Component {
 	render() {
 		var { label, title, description } = this.props;
 		return (

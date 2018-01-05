@@ -17,7 +17,7 @@ type Props = {
 		id: any,
 	},
 };
-class Box extends React.Component<Props> {
+export class Box extends React.Component<Props> {
 	render() {
 		var { box } = this.props;
 		if (!box || !(this.props.children || box.Children)) {
@@ -28,7 +28,6 @@ class Box extends React.Component<Props> {
 
 		return (
 			<Styled.Box
-				ref="box"
 				className={
 					'box ' +
 					(box.theme ? ' theme_' + box.theme : '') +

@@ -2,25 +2,43 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Box from 'components/box/Box';
-import * as uiActions from 'redux/actions/ui'; 
+import * as uiActions from 'redux/actions/ui';
 
 import * as Styled from './TopStyled';
 import SpecificErrorBoundary from 'components/error/SpecificErrorBoundary';
 
 type Props = {
-	nav: {}
+	nav: {},
 };
-class Top extends Component<Props> {
+export class Top extends Component<Props> {
 	render() {
 		const { deviceInfo } = this.props;
 		if (deviceInfo) {
 			var DeviceInfo = (
 				<Box box={{ title: 'New Luxul Product', theme: 'global' }}>
 					<div className="form">
-						<p>Model #: {deviceInfo.model}<br />Firmware #: {deviceInfo.firmware}</p>
-						<p>This app was originally designed for Luxul Inc., in Draper UT. It had some API calls that worked with Luxul brand products.</p>
-						<p>Now, it is simply a UI demo for Mui-Form ReactJS library, and a bootstrap for a modern ReactJS app.</p>
-						<p>If you are on the login screen, <a href="/XWC1001/examples/validation" style={{fontWeight:"bold"}} className="color_success fix_textWrap">click here to enter the demo &raquo;</a></p>
+						<p>
+							Model #: {deviceInfo.model}
+							<br />Firmware #: {deviceInfo.firmware}
+						</p>
+						<p>
+							This app was originally designed for Luxul Inc., in Draper UT. It had some API calls
+							that worked with Luxul brand products.
+						</p>
+						<p>
+							Now, it is simply a UI demo for Mui-Form ReactJS library, and a bootstrap for a modern
+							ReactJS app.
+						</p>
+						<p>
+							If you are on the login screen,{' '}
+							<a
+								href="/XWC1001/examples/validation"
+								style={{ fontWeight: 'bold' }}
+								className="color_success fix_textWrap"
+							>
+								click here to enter the demo &raquo;
+							</a>
+						</p>
 					</div>
 				</Box>
 			);
@@ -65,7 +83,9 @@ class Top extends Component<Props> {
 						</Styled.Hamburger>
 
 						<Styled.Logo>
-							<a href="/"><img src="/branding/logo/logo_white.svg" alt="LUXUL" /></a>
+							<a href="/">
+								<img src="/branding/logo/logo_white.svg" alt="LUXUL" />
+							</a>
 						</Styled.Logo>
 
 						{Details || null}
@@ -75,18 +95,17 @@ class Top extends Component<Props> {
 		);
 	}
 }
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
 	return {
-		nav: state.ui.nav || {}
-  	}
-}
+		nav: state.ui.nav || {},
+	};
+};
 Top = connect(mapStateToProps)(Top);
-
 
 // connect global data
 // when {window.store.top} changes, update {this.state.top}
 class TopConnected extends Component {
-	constructor(){
+	constructor() {
 		super();
 		this.state = {
 			deviceInfo: window.store.deviceInfo,
@@ -106,4 +125,3 @@ class TopConnected extends Component {
 	}
 }
 export default TopConnected;
-

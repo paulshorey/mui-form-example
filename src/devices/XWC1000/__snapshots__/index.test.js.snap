@@ -1,0 +1,420 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-iwsKbI gnbXsY"
+>
+  <div
+    className="sc-gzVnrw bYkUlK"
+  >
+    <div
+      className="messages_container"
+    >
+      <div
+        className="messages_content"
+      >
+        <div
+          className="message"
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="message_content"
+          >
+            <div
+              className="messageX"
+              onClick={[Function]}
+            >
+              <span
+                className="fontIcon icon-cross"
+                title="hide message"
+              />
+            </div>
+            <div
+              className="message_text messageTitle"
+            >
+              <div>
+                <span>
+                   
+                </span>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="layout_container withNav"
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="sc-bwzfXH Xhbhr"
+    >
+      <div>
+        <div
+          className="sc-ifAKCX bIPvnp"
+          id="Hamburger"
+          onClick={[Function]}
+        >
+          <div
+            className="hamburger-icon"
+          >
+            <div
+              className="hamburger-centered"
+            >
+              <div
+                className="hamburger-top"
+              />
+              <div
+                className="hamburger-middle"
+              />
+              <div
+                className="hamburger-bottom"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-htpNat ipbLAt"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="LUXUL"
+              src="/branding/logo/logo_white.svg"
+            />
+          </a>
+        </div>
+        <div
+          className="sc-bxivhb kLTdtH"
+          onClick={[Function]}
+        >
+          <span
+            className="link"
+          >
+            <span
+              className="title"
+              style={
+                Object {
+                  "paddingTop": "0.1rem",
+                  "textIndent": "-1.5px",
+                }
+              }
+            >
+              XWC-1000
+            </span>
+            <span
+              className="text"
+              style={
+                Object {
+                  "textIndent": "-1px",
+                }
+              }
+            >
+              Firmware: 
+              abc-123
+            </span>
+          </span>
+          <span
+            className="fontIcon icon-navlink_info"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="layout_content"
+    >
+      <div
+        className="nav_left closed sc-bZQynM bqIVsN"
+      >
+        <div
+          className="group"
+        >
+          <div
+            className="title"
+            onClick={[Function]}
+          >
+            <span
+              className="fontIcon icon-navlink_plus"
+            />
+            <span
+              className="fontIcon icon-navlink_minus"
+            />
+            <span>
+              Status
+            </span>
+          </div>
+          <div
+            className="children"
+          >
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/status/controller"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                Controller
+              </span>
+            </a>
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/status/ap"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                AP
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          className="group"
+        >
+          <div
+            className="title"
+            onClick={[Function]}
+          >
+            <span
+              className="fontIcon icon-navlink_plus"
+            />
+            <span
+              className="fontIcon icon-navlink_minus"
+            />
+            <span>
+              Profile Management
+            </span>
+          </div>
+          <div
+            className="children"
+          >
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/profiles/ap_management"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                AP Management
+              </span>
+            </a>
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/profiles/ap_assignment"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                AP Assignment
+              </span>
+            </a>
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/profiles/ssid_management"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                SSID Management
+              </span>
+            </a>
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/profiles/wireless_settings"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                Wireless Settings
+              </span>
+            </a>
+          </div>
+        </div>
+        <a
+          aria-current={false}
+          className="title link"
+          href="/XWC1000/vlan"
+          onClick={[Function]}
+          style={undefined}
+        >
+          <span
+            className="fontIcon icon-navlink_dot"
+          />
+          <span>
+            VLAN
+          </span>
+        </a>
+        <a
+          aria-current={false}
+          className="title link"
+          href="/XWC1000/controller"
+          onClick={[Function]}
+          style={undefined}
+        >
+          <span
+            className="fontIcon icon-navlink_dot"
+          />
+          <span>
+            Controller Settings
+          </span>
+        </a>
+        <div
+          className="group"
+        >
+          <div
+            className="title"
+            onClick={[Function]}
+          >
+            <span
+              className="fontIcon icon-navlink_plus"
+            />
+            <span
+              className="fontIcon icon-navlink_minus"
+            />
+            <span>
+              Examples
+            </span>
+          </div>
+          <div
+            className="children"
+          >
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/examples/network"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                Network
+              </span>
+            </a>
+            <a
+              aria-current={false}
+              className="title link"
+              href="/XWC1000/examples/validation"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <span
+                className="fontIcon icon-navlink_dot"
+              />
+              <span>
+                Validation
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        className="page"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="Bottom sc-EHOje fNRtIu"
+    >
+      <span
+        className="logo"
+      >
+        <img
+          alt="Legrand"
+          src="/branding/logo/legrand_white.svg"
+        />
+      </span>
+      <span
+        className="copyright"
+      >
+        <a
+          className="color_success"
+          href="/"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          LOGOUT 
+          <span
+            className="icon-ui_security"
+          />
+        </a>
+      </span>
+    </div>
+    <div
+      className="sideBox  sc-htoDjs dXTkss"
+    >
+      <div
+        className="sideBox_overlay"
+        onClick={[Function]}
+      />
+      <div
+        className="sideBox_content"
+      >
+        <div
+          className="sideBox_close"
+          onClick={[Function]}
+        >
+          <span
+            className="fontIcon icon-cross"
+            title="Close"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="popupBox  sc-dnqmqq feMKQw"
+    >
+      <div
+        className="popupBox_overlay"
+        onClick={[Function]}
+      />
+      <div
+        className="popupBox_content"
+      >
+        <div
+          className="popupBox_close"
+          onClick={[Function]}
+        >
+          <span
+            className="fontIcon icon-cross"
+            title="Close"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

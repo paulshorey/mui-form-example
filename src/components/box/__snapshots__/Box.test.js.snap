@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="box  sc-bdVaJa eujpTF"
+  id=""
+>
+  <div
+    className="box_content"
+  >
+    <div
+      className="box_top"
+    >
+      <div
+        className="items"
+      >
+        <div
+          className="item title"
+        >
+          
+          
+        </div>
+        <span />
+      </div>
+    </div>
+    <div
+      className="box_middle"
+    >
+      <div>
+        hello
+      </div>
+    </div>
+  </div>
+</div>
+`;

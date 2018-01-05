@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  id="testing!"
+>
+  <div
+    className="sc-bdVaJa LvSIm"
+  >
+    <div
+      className="messages_container"
+    >
+      <div
+        className="messages_content"
+      >
+        <div
+          className="message opened"
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="message_content"
+          >
+            <div
+              className="messageX"
+              onClick={[Function]}
+            >
+              <span
+                className="fontIcon icon-cross"
+                title="hide message"
+              />
+            </div>
+            <div
+              className="message_text messageTitle"
+            >
+              <div>
+                Hello!
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

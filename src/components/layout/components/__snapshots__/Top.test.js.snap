@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bwzfXH Xhbhr"
+>
+  <div>
+    <div
+      className="sc-ifAKCX bIPvnp"
+      id="Hamburger"
+      onClick={[Function]}
+    >
+      <div
+        className="hamburger-icon"
+      >
+        <div
+          className="hamburger-centered"
+        >
+          <div
+            className="hamburger-top"
+          />
+          <div
+            className="hamburger-middle"
+          />
+          <div
+            className="hamburger-bottom"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat ipbLAt"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="LUXUL"
+          src="/branding/logo/logo_white.svg"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

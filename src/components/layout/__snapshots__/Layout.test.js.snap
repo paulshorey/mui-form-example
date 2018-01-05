@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-iwsKbI gnbXsY"
+>
+  <div
+    className="sc-gzVnrw bYkUlK"
+  >
+    <div
+      className="messages_container"
+    >
+      <div
+        className="messages_content"
+      >
+        <div
+          className="message"
+          onMouseEnter={[Function]}
+        >
+          <div
+            className="message_content"
+          >
+            <div
+              className="messageX"
+              onClick={[Function]}
+            >
+              <span
+                className="fontIcon icon-cross"
+                title="hide message"
+              />
+            </div>
+            <div
+              className="message_text messageTitle"
+            >
+              <div>
+                <span>
+                   
+                </span>
+                 
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="layout_container noNav"
+    onKeyDown={[Function]}
+    tabIndex={0}
+  >
+    <div
+      className="sc-bwzfXH Xhbhr"
+    >
+      <div>
+        <div
+          className="sc-ifAKCX bIPvnp"
+          id="Hamburger"
+          onClick={[Function]}
+        >
+          <div
+            className="hamburger-icon"
+          >
+            <div
+              className="hamburger-centered"
+            >
+              <div
+                className="hamburger-top"
+              />
+              <div
+                className="hamburger-middle"
+              />
+              <div
+                className="hamburger-bottom"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="sc-htpNat ipbLAt"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="LUXUL"
+              src="/branding/logo/logo_white.svg"
+            />
+          </a>
+        </div>
+        <div
+          className="sc-bxivhb kLTdtH"
+          onClick={[Function]}
+        >
+          <span
+            className="link"
+          >
+            <span
+              className="title"
+              style={
+                Object {
+                  "paddingTop": "0.1rem",
+                  "textIndent": "-1.5px",
+                }
+              }
+            >
+              
+            </span>
+            <span
+              className="text"
+              style={
+                Object {
+                  "textIndent": "-1px",
+                }
+              }
+            >
+              Firmware: 
+              
+            </span>
+          </span>
+          <span
+            className="fontIcon icon-navlink_info"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="layout_content"
+    >
+      <div
+        className="page"
+        onClick={[Function]}
+      >
+        <div />
+      </div>
+    </div>
+    <div
+      className="Bottom sc-EHOje fNRtIu"
+    >
+      <span
+        className="logo"
+      >
+        <img
+          alt="Legrand"
+          src="/branding/logo/legrand_white.svg"
+        />
+      </span>
+      <span
+        className="copyright"
+      >
+        <span
+          className="desktop_only"
+        >
+          This app is non-functional without the Mui hardware. 
+        </span>
+        <a
+          className="color_success"
+          href="/XWC1001/examples/validation"
+          style={
+            Object {
+              "fontWeight": "bold",
+            }
+          }
+        >
+          CLICK HERE TO DEMO the UI »
+        </a>
+      </span>
+    </div>
+    <div
+      className="sideBox  sc-htoDjs dXTkss"
+    >
+      <div
+        className="sideBox_overlay"
+        onClick={[Function]}
+      />
+      <div
+        className="sideBox_content"
+      >
+        <div
+          className="sideBox_close"
+          onClick={[Function]}
+        >
+          <span
+            className="fontIcon icon-cross"
+            title="Close"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="popupBox  sc-dnqmqq feMKQw"
+    >
+      <div
+        className="popupBox_overlay"
+        onClick={[Function]}
+      />
+      <div
+        className="popupBox_content"
+      >
+        <div
+          className="popupBox_close"
+          onClick={[Function]}
+        >
+          <span
+            className="fontIcon icon-cross"
+            title="Close"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

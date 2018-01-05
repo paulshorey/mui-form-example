@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sideBox  sc-bdVaJa iXrkYb"
+>
+  <div
+    className="sideBox_overlay"
+    onClick={[Function]}
+  />
+  <div
+    className="sideBox_content"
+  >
+    <div
+      className="sideBox_close"
+      onClick={[Function]}
+    >
+      <span
+        className="fontIcon icon-cross"
+        title="Close"
+      />
+    </div>
+  </div>
+</div>
+`;

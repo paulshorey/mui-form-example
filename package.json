@@ -41,6 +41,7 @@
   "devDependencies": {
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "redux-test-utils": "^0.2.2",
     "webpack": "^3.10.0"
   },
   "proxy": "http://192.168.0.19:80/"

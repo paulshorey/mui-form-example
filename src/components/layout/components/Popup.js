@@ -4,7 +4,7 @@ import * as Styled from './PopupStyled';
 
 // only local data
 // {this.state} and {this.props}
-class Popup extends React.Component {
+export class Popup extends React.Component {
 	render() {
 		const { popup = {} } = this.props;
 

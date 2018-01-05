@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="Hint sc-bdVaJa diGFYN"
+  onClick={[Function]}
+>
+  <sup
+    className="fontIcon icon-pk_question"
+  />
+</div>
+`;

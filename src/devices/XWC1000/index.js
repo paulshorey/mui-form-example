@@ -103,7 +103,7 @@ routes.pageNotFound = {
 	},
 };
 
-class XWC1000 extends React.Component {
+export class XWC1000 extends React.Component {
 	/*
 		build list of <Route />s
 	*/
@@ -160,13 +160,6 @@ class XWC1000 extends React.Component {
 					<Redirect exact from="/XWC1000" to="/XWC1000/status/controller" />
 					{/* Auto-built device-specific urls */}
 					{this.renderRoutes(routes)}
-					{/* Default url: 404 */}
-					<Route
-						component={() => {
-							var RouteComponent = routes.pageNotFound.component();
-							return <RouteComponent {...this.props} page={routes.pageNotFound} />;
-						}}
-					/>
 				</Switch>
 			</Layout>
 		);
