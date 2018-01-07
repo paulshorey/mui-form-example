@@ -8,7 +8,7 @@
     "history": "^4.7.2",
     "husky": "^0.14.3",
     "lint-staged": "^4.2.1",
-    "mui-form": "^1.1.9",
+    "mui-form": "^1.1.12",
     "prettier": "^1.7.0",
     "react": "^16.2.0",
     "react-code-splitting": "^1.2.1",
