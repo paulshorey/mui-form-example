@@ -213,7 +213,7 @@ injectGlobal`
 		READ THIS COMMENT !!!
 
 		* do not remove this section
-		* don't fuck with the @media sizes or title comments
+		* don't mess with the @media sizes or title comments
 		* use this as a template - copy paste these rules, and remove everything except @media rules
 		* also good to use as a demo to figure out screen size breakpoints - keep as is and simply remove the !important flag below
 	**************************************************/
