@@ -1,12 +1,3 @@
-&nbsp;    
-### [~~Read all about our Mui app and architecture in Confluence...~~*](http://confluence:8090/x/5oCI)
-*New documentation coming soon  
-&nbsp;  
-### [Read about Create-React-App which is used to bootstrap a React app (ours and others) in Github...](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)  
-&nbsp;  
-&nbsp;  
-&nbsp;  
-
 # How our app is different from the standard Create-React-App  
 1. **yarn** -- like **npm** but better
 2. **prettier** -- integrated with **Webpack** to format the codebase whenever you `git commit`
