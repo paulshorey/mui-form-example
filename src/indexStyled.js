@@ -210,10 +210,9 @@ injectGlobal`
 
 	/**************************************************
 		
-		READ THIS COMMENT !!!
+		READ THIS COMMENT:
 
 		* do not remove this section
-		* don't fuck with the @media sizes or title comments
 		* use this as a template - copy paste these rules, and remove everything except @media rules
 		* also good to use as a demo to figure out screen size breakpoints - keep as is and simply remove the !important flag below
 	**************************************************/
@@ -288,9 +287,11 @@ injectGlobal`
 	*/
 	@media (min-width: 751px), (min-width:601px) and (min-height: 601px) {
 		body {
-			background: linear-gradient(180deg, ${window.theme.colorDark1} 0px,  ${window.theme
-	.colorDark2} 100px,  ${window.theme.colorDark3} 260px, ${window.theme.colorDark3} 380px, ${window
-	.theme.colorDark3} 380px, ${window.theme.colorDark1} 100%);
+			background: linear-gradient(180deg, ${window.theme.colorDark1} 0px,  ${
+	window.theme.colorDark2
+} 100px,  ${window.theme.colorDark3} 260px, ${window.theme.colorDark3} 380px, ${
+	window.theme.colorDark3
+} 380px, ${window.theme.colorDark1} 100%);
 		}
 	}
 `;
